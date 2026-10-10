@@ -17,6 +17,10 @@ familiar.
 
 > **Status:** early development. Expect rough edges, and keep a backup of anything important.
 
+<p align="center">
+  <img src="docs/screenshots/mac.png" width="800" alt="CellNotes on a Mac in Split view: Markdown, Terraform code and a diagram on the left, rendered on the right">
+</p>
+
 ## Features
 
 - **Cells of different types in one note**
@@ -34,6 +38,12 @@ familiar.
 - **Imports your Quiver library**, including images
 - **Themes**: System, Light, Dark, Solarized Light, Solarized Dark, Dracula, Nord and One Dark
 - **Works offline**: preview rendering is built into the app
+
+<p align="center">
+  <img src="docs/screenshots/iphone.png" height="420" alt="CellNotes on iPhone, previewing a note with a table, code and a diagram">
+  &nbsp;
+  <img src="docs/screenshots/ipad.png" height="420" alt="CellNotes on iPad in Split view">
+</p>
 
 ## Download
 

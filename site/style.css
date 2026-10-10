@@ -45,3 +45,15 @@ h2 { margin-top: 48px; font-size: 24px; }
 .prose em:first-of-type { color: var(--muted); }
 footer { max-width: 760px; margin: 0 auto; padding: 24px 20px 48px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
 footer a { color: inherit; }
+.shot { margin: 0 0 40px; }
+.shot img { display: block; width: 100%; height: auto; border-radius: 12px; }
+/* Phone and tablet side by side at the same height (flex grows by each image's width/height ratio). */
+.devices { display: flex; gap: 16px; align-items: flex-start; }
+.devices img { display: block; min-width: 0; height: auto; border-radius: 16px; border: 1px solid var(--line); }
+.devices .phone { flex: 0.46; }
+.devices .tablet { flex: 1.333; }
+@media (max-width: 560px) {
+  .devices { flex-direction: column; align-items: center; }
+  .devices .phone { flex: none; width: 62%; }
+  .devices .tablet { flex: none; width: 100%; }
+}
