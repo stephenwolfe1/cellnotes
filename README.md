@@ -31,6 +31,14 @@ familiar.
   - Images, pasted straight from the clipboard
   - Checklists
   - Optional extras you can switch on: tables, callouts, links and file attachments
+- **Folders, tags and a graph view**: nest notes in real folders, label them across folders, and see how
+  notes, links and tags connect
+- **Links between notes**: type `[[` to link a note; each note lists what links back to it
+- **Search that reaches into images** (Mac): text in screenshots and photos is searchable, read on your
+  Mac and never uploaded. Notes also show up in Spotlight and Siri
+- **Shortcuts and Siri actions** on Mac, iPhone and iPad
+- **Works with Claude and other AI assistants** (Mac): a built-in, sandboxed MCP server. Assistants get
+  library overviews and outlines, semantic search, links and graph, small edits and summaries
 - **Edit, Split and Preview modes**: write on one side, see the rendered note on the other
 - **Syncs with iCloud Drive** across your Mac, iPhone and iPad
 - **Your notes are plain files**: JSON and ordinary image files in a folder you can see in Finder and
@@ -49,8 +57,7 @@ familiar.
 
 | Platform | |
 | --- | --- |
-| macOS 14 or later | Download the latest `.dmg` from [Releases](../../releases) |
-| iPhone and iPad (iOS 17 or later) | Coming later |
+| Mac (macOS 15 or later), iPhone and iPad (iOS 17 or later) | [Download on the App Store](https://apps.apple.com/us/app/cellnotes-app/id6820747798) |
 
 ## Using CellNotes
 

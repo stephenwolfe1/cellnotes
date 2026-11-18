@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CellNotes: notes made of cells</title>
-  <meta name="description" content="CellNotes is a note app for Mac, iPhone and iPad where every note is a stack of cells: Markdown, code, LaTeX math, diagrams, images and checklists.">
+  <meta name="description" content="CellNotes is a note app for Mac, iPhone and iPad where every note is a stack of cells: Markdown, code, LaTeX math, diagrams, images and checklists. Link notes, search inside images, organize with folders and tags, and let Claude read and write your notes.">
   <link rel="icon" href="icon.png">
   <link rel="apple-touch-icon" href="icon.png">
   <link rel="stylesheet" href="style.css">
@@ -15,14 +15,15 @@
     <img src="icon.png" alt="CellNotes icon">
     <h1>CellNotes</h1>
     <p>Notes made of cells, for Mac, iPhone and iPad.</p>
+    <p class="req">Requires macOS 15 or later, or iOS 17 or later.</p>
     <div class="buttons">
-      <span class="button secondary">Coming soon to the App Store</span>
-      <a class="button" href="https://github.com/stephenwolfe1/cellnotes/issues">Feedback</a>
+      <a class="button" href="https://apps.apple.com/us/app/cellnotes-app/id6820747798">Download on the App Store</a>
+      <a class="button secondary" href="https://github.com/stephenwolfe1/cellnotes/issues">Feedback</a>
     </div>
   </header>
 
   <figure class="shot">
-    <img src="screenshots/mac.webp" width="1600" height="1000" alt="CellNotes on a Mac in Split view: Markdown, Terraform code and a diagram on the left, rendered on the right">
+    <img src="screenshots/mac-cells.webp" width="1600" height="1000" alt="CellNotes on a Mac in Split view: a Markdown cell, LaTeX equation, sequence diagram and Swift code on the left, rendered on the right, with a folder tree in the sidebar">
   </figure>
 
   <p>Every note in CellNotes is a stack of cells, and each cell has its own type. Write a paragraph in Markdown, add a snippet of code, follow it with an equation and a diagram, and each part is edited and displayed the way it should be.</p>
@@ -37,18 +38,76 @@
     <div class="card"><h3>Checklists</h3><p>Tick items off in the editor or the preview.</p></div>
   </div>
 
+  <h2>Link your notes</h2>
+  <p>Type <code>[[</code> in any cell and pick a note to link to it. Every note shows what links back to it under <em>Linked from</em>, so related ideas stay one click apart.</p>
+  <figure class="shot">
+    <img src="screenshots/mac-links.webp" width="1600" height="1000" loading="lazy" alt="Typing [[ in a CellNotes cell opens a list of notes to link to, with a small graph of the note's neighbors on the right">
+  </figure>
+  <p>The graph view draws your whole library as a map of notes, links and tags. Open it from the toolbar on any device, or view just the neighborhood around the note you are reading.</p>
+  <figure class="shot">
+    <img src="screenshots/mac-graph.webp" width="1600" height="1000" loading="lazy" alt="CellNotes graph window showing notes as colored dots connected by links">
+  </figure>
+
+  <h2>Find anything</h2>
+  <p>Press &#8984;F to jump to any note or folder, or type <code>#tag</code> to filter by tag. On the Mac, CellNotes also reads the text in your images, so a screenshot of an error message or a photo of a whiteboard turns up in search. It happens on your Mac with Apple's Vision framework, nothing is uploaded, and a setting turns it off. Your notes also appear in Spotlight and Siri.</p>
+  <figure class="shot">
+    <img src="screenshots/mac-image-search.webp" width="1600" height="1000" loading="lazy" alt="Searching CellNotes for a word that appears only inside a screenshot finds the note that contains it">
+  </figure>
+
+  <h2>Organize your way</h2>
+  <div class="grid">
+    <div class="card"><h3>Folders</h3><p>Real folders you can nest, drag notes into, and see in Finder and Files.</p></div>
+    <div class="card"><h3>Tags</h3><p>Label notes across folders, with colors, counts and a click to filter.</p></div>
+    <div class="card"><h3>Your order</h3><p>Sort by name or date, or drag notes and folders into the order you want.</p></div>
+    <div class="card"><h3>Sidebar sections</h3><p>Library, Tags and Recent, each collapsible and reorderable.</p></div>
+    <div class="card"><h3>Graph view</h3><p>See how notes, links and tags connect.</p></div>
+    <div class="card"><h3>Quiver import</h3><p>Bring in a Quiver library, with notebooks as folders and tags kept.</p></div>
+  </div>
+
+  <h2>Built for writing</h2>
+  <div class="grid">
+    <div class="card"><h3>Resizable Split view</h3><p>Drag the divider between editor and preview. On narrow screens they stack.</p></div>
+    <div class="card"><h3>Multiple cursors</h3><p>Option-click, &#8984;D and column selection in text cells on the Mac.</p></div>
+    <div class="card"><h3>Duplicate cells</h3><p>Copy any cell or a whole note in one click.</p></div>
+    <div class="card"><h3>Smart checklists</h3><p>Arrow keys move between items, and selections span items.</p></div>
+    <div class="card"><h3>Move between cells</h3><p>&#8984;&#8593; and &#8984;&#8595; step through cells, and pasted images become image cells.</p></div>
+    <div class="card"><h3>Large libraries</h3><p>Big custom library folders open quickly and stay responsive.</p></div>
+  </div>
+
+  <h2>Works with Claude and other AI assistants</h2>
+  <p class="badge">Mac only</p>
+  <p>CellNotes includes a built-in MCP server, so Claude and other assistants can work with your notes. Ask Claude what changed after an incident, which notes mention a topic, or to add a cell to today's note.</p>
+  <figure class="shot">
+    <img src="screenshots/mac-assistant.webp" width="1600" height="1000" loading="lazy" alt="Claude answering a question about a Redis incident by reading the matching note in CellNotes, shown next to the note">
+  </figure>
+  <ul class="next">
+    <li><strong>Lean by design:</strong> assistants start with a library overview and note outlines, read only the cells they need, make small edits to a single cell, and ask what changed since they last looked.</li>
+    <li><strong>Finds notes by meaning:</strong> semantic search runs on your Mac, so an assistant can find the right note without reading your whole library.</li>
+    <li><strong>Understands your links:</strong> assistants can follow links and backlinks, see related notes and read the graph.</li>
+    <li><strong>Writes summaries:</strong> an assistant can add a short summary to a note, which shows under the note's title in Spotlight.</li>
+    <li><strong>Folders, tags and checklists:</strong> list, search, read, create and edit notes, folders and tags, and tick checklist items.</li>
+  </ul>
+  <p>Install it in Claude from Settings &gt; Assistants. There is nothing else to download, and a switch turns it off whenever you like. The helper is sandboxed and talks only to the CellNotes app, never to your files directly, and CellNotes opens quietly in the background when an assistant needs it.</p>
+
+  <h2>Shortcuts and Siri</h2>
+  <p>CellNotes adds actions to the Shortcuts app on Mac, iPhone and iPad. Create notes, find them and append to them from your own shortcuts, or ask Siri.</p>
+
   <h2>On your Mac, iPhone and iPad</h2>
-  <p>The same notes on every device, with an editor and preview made for each screen.</p>
+  <p>The same notes on every device, with an editor and preview made for each screen. CellNotes also fits the iPhone Duo and narrow iPad windows.</p>
   <div class="devices">
-    <img class="phone" src="screenshots/iphone.webp" width="600" height="1304" loading="lazy" alt="CellNotes on iPhone, previewing a note with a table, code and a diagram">
-    <img class="tablet" src="screenshots/ipad.webp" width="1200" height="900" loading="lazy" alt="CellNotes on iPad in Split view">
+    <img class="phone" src="screenshots/iphone-preview.webp" width="600" height="1304" loading="lazy" alt="CellNotes on iPhone, previewing a note with an equation, a sequence diagram and code">
+    <img class="tablet" src="screenshots/ipad-split.webp" width="1200" height="900" loading="lazy" alt="CellNotes on iPad in Split view, with folders and tags in the sidebar and a note with linked notes below">
+  </div>
+  <div class="devices">
+    <img class="phone" src="screenshots/iphone-graph.webp" width="600" height="1304" loading="lazy" alt="The CellNotes graph on iPhone">
+    <img class="tablet" src="screenshots/ipad-links.webp" width="1200" height="900" loading="lazy" alt="CellNotes on iPad previewing a note with a link, a table, code and a diagram, with a small graph of linked notes on the right">
   </div>
 
   <h2>Your notes are your files</h2>
   <p>Notes are saved as plain files in a CellNotes folder in your iCloud Drive, so they sync across your devices and you can browse, back up or search them like any other files. Nothing is locked inside the app.</p>
 
   <h2>Private by design</h2>
-  <p>No account, no tracking, no ads. CellNotes collects no data. Read the <a href="privacy">privacy policy</a>.</p>
+  <p>No account, no tracking, no ads. CellNotes collects no data, and the assistant server stays on your Mac. Read the <a href="privacy">privacy policy</a>.</p>
 </main>
 <footer>
   &copy; 2026 Stephen Wolfe &middot; <a href="privacy">Privacy</a> &middot; <a href="https://github.com/stephenwolfe1/cellnotes/issues">Support</a>
