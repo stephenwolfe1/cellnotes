@@ -30,6 +30,7 @@ header.hero { text-align: center; margin-bottom: 48px; }
 header.hero img { width: 128px; height: 128px; }
 header.hero h1 { font-size: 40px; margin: 12px 0 4px; letter-spacing: -0.02em; }
 header.hero p { color: var(--muted); font-size: 20px; margin: 0; }
+header.hero p.req { font-size: 14px; margin-top: 8px; }
 .buttons { margin-top: 24px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 .button {
   display: inline-block; padding: 10px 20px; border-radius: 10px;
@@ -57,3 +58,12 @@ footer a { color: inherit; }
   .devices .phone { flex: none; width: 62%; }
   .devices .tablet { flex: none; width: 100%; }
 }
+
+.badge { display: inline-block; background: var(--card); border: 1px solid var(--line); color: var(--muted); border-radius: 999px; padding: 2px 12px; font-size: 14px; margin: 0 0 8px; }
+h3 { margin-top: 28px; }
+ul.next { padding-left: 20px; color: var(--muted); }
+ul.next strong { color: var(--fg); }
+
+code { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; font-size: 0.9em; }
+.shot + p, p + .shot { margin-top: 24px; }
+.devices + .devices { margin-top: 16px; }
